@@ -66,7 +66,7 @@ export default function TodoItem({ item, todos, setToDos }) {
             onClick={() => setIsEditing(true)}
             className={styles.editButton}
           >
-            Editt
+            Edit
           </button>
         )}
       </div>
