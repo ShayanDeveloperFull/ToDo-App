@@ -5,6 +5,7 @@ import { useState } from "react";
 export default function TodoItem({ item, todos, setToDos }) {
   const [isEditing, setIsEditing] = useState(false);
   const [tempName, setTempName] = useState(item.name);
+  const [tempDate, setTempDate] = useState(item.date);
 
   function handleDelete(item) {
     console.log("Delete Button Clicked for Item", item.name);
@@ -22,7 +23,10 @@ export default function TodoItem({ item, todos, setToDos }) {
   function handleEditSubmit() {
     setToDos(
       todos.map(
-        (todo) => (todo === item ? { ...todo, name: tempName } : todo) // Use item reference to update the specific todo
+        (todo) =>
+          todo === item
+            ? { ...todo, name: tempName, date: tempDate } // Update both name and date
+            : todo // Use item reference to update the specific todo
       )
     );
     setIsEditing(false);
@@ -40,6 +44,12 @@ export default function TodoItem({ item, todos, setToDos }) {
               type="text"
               value={tempName}
               onChange={(e) => setTempName(e.target.value)}
+            />
+            <input
+              className={styles.editInput}
+              type="date"
+              value={tempDate}
+              onChange={(e) => setTempDate(e.target.value)}
             />
             <button onClick={handleEditSubmit} className={styles.changeButton}>
               Change
