@@ -70,6 +70,11 @@ export default function TodoItem({ item, todos, setToDos }) {
           </button>
         )}
       </div>
+      {!item.done && (
+        <div style={{ fontSize: "12px", fontWeight: "bold" }}>
+          Have It Done By: <span className={styles.itemDate}>{item.date}</span>
+        </div>
+      )}
       <hr />
       {!item.done && <Complete />}
     </div>

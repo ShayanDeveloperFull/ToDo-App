@@ -10,6 +10,12 @@
   padding: 20px;
 }
 
+.itemDate {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: yellow;
+}
+
 .line {
   border: 1px solid #f4f4f4;
 }

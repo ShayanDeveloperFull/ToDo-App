@@ -14,10 +14,25 @@
   border: none;
   color: black;
   font-size: 16px;
+  margin-right: 10px;
+  outline: none;
 }
 
-.modernInput:focus {
-  outline: none;
+.dateInput {
+  width: 500px; /* Keep visible input space */
+  margin-left: 40px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.dateInput::-webkit-datetime-edit {
+  display: block; /* Allow text to appear when input is focused */
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  cursor: pointer; /* Make it clear the input is interactive */
 }
 
 .modernButton {
