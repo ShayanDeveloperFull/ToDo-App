@@ -25,6 +25,7 @@ export default function Form({ todos, setToDos }) {
           onChange={(e) => setToDo({ ...todo, date: e.target.value })}
           type="date"
           value={todo.date}
+          style={{ color: todo.date ? "black" : "white" }}
         />
         <button className={styles.modernButton} type="submit">
           Add
