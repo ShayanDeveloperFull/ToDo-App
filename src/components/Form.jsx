@@ -28,7 +28,7 @@ export default function Form({ todos, setToDos }) {
           style={{ color: todo.date ? "black" : "white" }}
         />
         <button className={styles.modernButton} type="submit">
-          Addd
+          Add
         </button>
       </div>
     </form>
