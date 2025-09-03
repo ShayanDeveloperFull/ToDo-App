@@ -15,8 +15,8 @@
 
 @media (max-width: 768px) {
   .list {
-    width: calc(100% - 40px);
-    margin: 20px;
+    width: 80%;
+    margin: 0 auto;
     margin-top: 16px;
     padding: 16px;
     margin-bottom: 120px;
