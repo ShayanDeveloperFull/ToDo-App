@@ -27,7 +27,7 @@ export default function Form({ todos, setToDos }) {
           onChange={(e) => setToDo({ ...todo, date: e.target.value })}
           type={dateInputType}
           value={todo.date}
-          placeholder="Select Due Date..."
+          placeholder="Select Due Date...."
           onFocus={() => setDateInputType("date")}
           onBlur={() => {
             if (!todo.date) {
