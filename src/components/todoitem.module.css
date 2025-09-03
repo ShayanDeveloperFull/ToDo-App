@@ -65,3 +65,48 @@
   content: "✔";
   color: green;
 }
+
+@media (max-width: 768px) {
+  .item {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .itemName {
+    padding: 15px 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .deleteButton {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 10px 0 5px 0;
+    padding: 10px;
+  }
+
+  .editButton,
+  .changeButton {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .editInput {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+
+  .itemDate {
+    display: block;
+    margin: 5px 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+}
