@@ -19,7 +19,7 @@
 }
 
 .dateInput {
-  width: 500px; /* Keep visible input space */
+  width: 500px;
   margin-left: 40px;
   margin-right: 10px;
   border: 1px solid #ccc;
@@ -27,12 +27,8 @@
   border-radius: 4px;
 }
 
-.dateInput::-webkit-datetime-edit {
-  display: block; /* Allow text to appear when input is focused */
-}
-
 .dateInput::-webkit-calendar-picker-indicator {
-  cursor: pointer; /* Make it clear the input is interactive */
+  cursor: pointer;
 }
 
 .modernButton {

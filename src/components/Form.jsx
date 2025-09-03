@@ -3,11 +3,13 @@ import styles from "./form.module.css";
 
 export default function Form({ todos, setToDos }) {
   const [todo, setToDo] = useState({ name: "", done: false, date: "" });
+  const [dateInputType, setDateInputType] = useState("text");
 
   function handleSubmit(e) {
     e.preventDefault();
     setToDos([...todos, todo]);
     setToDo({ name: "", done: false, date: "" });
+    setDateInputType("text");
   }
 
   return (
@@ -23,9 +25,15 @@ export default function Form({ todos, setToDos }) {
         <input
           className={styles.dateInput}
           onChange={(e) => setToDo({ ...todo, date: e.target.value })}
-          type="date"
+          type={dateInputType}
           value={todo.date}
-          style={{ color: todo.date ? "black" : "white" }}
+          placeholder="Select Due Date..."
+          onFocus={() => setDateInputType("date")}
+          onBlur={() => {
+            if (!todo.date) {
+              setDateInputType("text");
+            }
+          }}
         />
         <button className={styles.modernButton} type="submit">
           Add
